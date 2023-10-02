@@ -10,7 +10,7 @@ def transcribe_audio(audio_file_path, language):
     recognizer = sr.Recognizer()
     audio_data = sr.AudioFile(audio_file_path)
     with audio_data as source:
-        audio = recognizer.record(source)
+        audio = recognizer.record(source) 
     
     try:
         return recognizer.recognize_google(audio, language=language)
